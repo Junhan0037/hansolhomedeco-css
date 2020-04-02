@@ -1,0 +1,446 @@
+body {
+    min-width: 1280px;
+}
+
+header {
+    position: relative;
+    height: 81px;
+    text-align: center;
+}
+
+header h1 {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    padding: 14px 0 0;  /*상, 좌=우, 하*/
+}
+
+header h1 a {
+    display: block; /*블록처리 : 가로를 다 채워서 줄바꿈 ex)div*/
+    width: 110px;
+    height: 48px;
+    color: transparent; /*글자색 투명*/
+    background: url(../images/sp_com.png) no-repeat -300px 0;
+}
+
+header .lnb li {
+    display: inline-block;
+}
+
+header .lnb li a {
+    display: block;
+    height: 81px;
+    padding: 0 35px; /*상=하, 좌=우*/
+    font-size: 17px;
+    color: #333;
+    line-height: 81px;
+}
+
+header .lnb li a:hover { /*hover : 마우스 올렸을 시 효과*/
+    color: #2d5b79;
+    font-weight: bold;
+}
+
+header .lnb li a span { /*밑의 span:after의 position을 absolute하기 위해 부모 태그 역할로 relative적용*/
+    position: relative;
+}
+
+header .lnb li a:hover span:after { /*밑줄 제작 : text_decoration을 대신 간격까지 제작가능*/
+    content: ""; /*after, before을 사용하기 위해 필요한 요소 (들어갈 내용)*/
+    display: block;
+    position: absolute; /*부모태그중 absolute, relative안에서 위치결정*/
+    left: 0;
+    bottom: -9px; /*-로 갈수록 위쪽으로 이동*/
+    width: 100%;
+    height: 1px;
+    background: #2d5b79;
+}
+
+header .spot {
+    position: absolute;
+    right: 50px;
+    top: 0;
+}
+
+header .spot li {
+    position: relative;
+    float: left; /*왼쪽에 띄우기*/
+}
+
+header .spot li::after { /*메뉴사이에 바 제작*/
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 7px;
+    background: #ccc;
+    transform: translateY(-50%); /*Y축 이동*/
+}
+
+header .spot li:first-child:after { /*첫번째 바 안보이기*/
+    display: none;
+}
+
+header .spot li a {
+    display: block;
+    height: 81px;
+    padding: 0 10px;
+    line-height: 81px;
+}
+
+header .spot li:last-child a {
+    padding-right: 0;
+}
+
+.visual {
+    position: relative;
+    padding: 0 50px;
+}
+
+.visual .con > div {
+    height: 640px;
+}
+
+.visual .con .slide {
+    background: url(../images/bg_main02.jpg) no-repeat center;
+    color: #fff;
+    font-size: 32px;
+    line-height: 46px;
+}
+
+.visual .con .slide p {
+    padding: 19px 0 0;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.visual .con .slide .txt {
+    position: absolute;
+    left: 50%;
+    top: 175px;
+}
+
+.product a {
+    display: block;
+    color: #001829;
+    font-size: 15px;
+}
+
+.product a:hover {
+    color: #2d5b79;
+    font-weight: bold;
+}
+
+.product a:before {
+    content: "";
+    display: block;
+    margin: 0 0 26px;
+    width: 64px;
+    height: 52px;
+    background: url(../images/sp_com.png) no-repeat;
+}
+
+.product ul {
+    padding: 46px 0 41px;
+    text-align: center;
+    font-size: 0;           /*inline-block의 간격을 없애기 위해*/
+}
+
+.product li {
+    display: inline-block;
+    padding: 0 55px;
+    text-align: center;
+}
+
+.product li:nth-child(1) a:before {
+    background-position: -3px -118px;
+}
+
+.product li:nth-child(2) a:before {
+    background-position: -75px -118px;
+}
+
+.product li:nth-child(3) a:before {
+    background-position: -148px -118px;
+}
+
+.product li:nth-child(4) a:before {
+    background-position: -219px -118px;
+}
+
+.product li:nth-child(5) a:before {
+    background-position: -292px -118px;
+}
+
+.product li:nth-child(6) a:before {
+    background-position: -364px -118px;
+}
+
+.product li:nth-child(1) a:hover:before {
+    background-position: -3px -184px;
+}
+
+.product li:nth-child(2) a:hover:before {
+    background-position: -75px -184px;
+}
+
+.product li:nth-child(3) a:hover:before {
+    background-position: -148px -184px;
+}
+
+.product li:nth-child(4) a:hover:before {
+    background-position: -219px -184px;
+}
+
+.product li:nth-child(5) a:hover:before {
+    background-position: -292px -184px;
+}
+
+.product li:nth-child(6) a:hover:before {
+    background-position: -364px -184px;
+}
+
+.magazine {
+    position: relative;
+    height: 670px;
+    background: #dfd9d1;;
+    overflow: hidden;
+}
+
+.magazine h2 {
+    padding: 50px 0 16px;
+    font-size: 28px;
+    color: #000;
+    text-align: center;
+    line-height: 100%;
+}
+
+.magazine p {
+    text-align: center;
+    font-size: 14px;
+    color: #3a3b36;
+    line-height: 100%;
+}
+
+.magazine .slide_box > div {
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    transform: translate(-50%, 0); /* left:50%한 상태에서 X축으로 -50%이동 */
+    width: 1180px;
+    height: 430px;
+}
+
+.magazine .slide_box > div:nth-child(1) { /* 왼쪽 잘린 화면 */
+    margin-left: -1280px;
+}
+
+.magazine .slide_box > div:nth-child(2) { /* 오른쪽 잘린 화면 */
+    margin-left: 1280px;
+}
+
+.magazine .slide_box .left {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 800px;
+    height: 430px;
+}
+
+.magazine .slide_box .left img {
+    width: 100%;
+    height: 430px;
+}
+
+.magazine .slide_box .left div {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 47px 20px 0;
+    width: 200px;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    box-sizing: border-box; /* width와 padding이 자동으로 합쳐지는걸 방지 */
+}
+
+.magazine .slide_box .left div h3 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.magazine .slide_box .left div h3 span {
+    display: block;
+    font-weight: normal;
+}
+
+.magazine .slide_box .left div p {
+    padding: 9px 0 0;
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+    line-height: 24px;
+}
+
+.magazine .slide_box .left div a {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    display: block;
+    width: 160px;
+    height: 45px;
+    border: 1px solid #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+}
+
+.magazine .slide_box .right {
+    float: right;
+    padding: 20px 20px 0;
+    width: 380px;
+    height: 430px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.magazine .slide_box .right li {
+    padding: 0 0 20px;
+}
+
+.magazine .slide_box .right li a {
+    display: table;
+    width: 100%;
+}
+
+.magazine .slide_box .right li a div {
+    display: table-cell; /* td를 의미 */
+    position: relative;
+    padding: 0 0 0 100px;
+    height: 82px;
+    font-size: 16px;
+    color: #333;
+    vertical-align: middle; /* 세로 정렬 */
+}
+
+.magazine .slide_box .right li a img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+}
+
+.magazine .slide_box .right li a strong {
+    display: block;
+    font-size: 13px;
+    color: #000;
+}
+
+.magazine.slide .control {
+    bottom: 48px;
+}
+
+.magazine.slide .prev {
+    left: 50%;
+    margin: 26px 0 0 -640px; /* Y축 기준 중간정렬 */
+}
+
+.magazine.slide .next{
+    right: 50%;
+    margin: 26px -640px 0 0;
+}
+
+/* slide */
+.slide .prev, .slide .next { /*좌, 우 기능 : 장애인 접근성을 위해 이미지보다 기능 먼저*/
+    display: block;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    width: 25px;
+    height: 47px;
+    transform: translateY(-50%);
+    background: url(../images/sp_com.png) no-repeat;
+    color: transparent;
+}
+
+.slide .prev {
+    left: 82px;
+    background-position: -128px -60px; /*아이콘 이미지에서 필요한 부분*/
+}
+
+.slide .next{
+    right: 82px;
+    background-position: -158px -60px; /*아이콘 이미지에서 필요한 부분*/
+}
+
+.slide .control {
+    position: absolute;
+    left: 0;
+    bottom: 55px;
+    width: 100%;
+    text-align: center;
+}
+
+.slide .control > div {
+    display: inline-block;
+    position: relative;
+    padding: 0 45px 0 0;
+}
+
+.slide .control > div > div {
+    position: absolute;
+    right: 0;
+}
+
+.slide .control > div > div a {
+    overflow: hidden;
+    display: inline-block; /*줄바꿈X, 크기조정O*/
+    margin: 0 0 0 7px;
+    width: 8px;
+    height: 9px;
+    background: url(../images/sp_com.png) no-repeat;
+    opacity: 0.5; /*투명도*/
+}
+
+.slide .control > div > div a.on {
+    opacity: 1; /*투명도*/
+}
+
+.slide .control > div > div a.play {
+    background-position: -108px -72px;
+}
+
+.slide .control > div > div a.pause {
+    background-position: -108px -60px;
+}
+
+.slide .control ul {
+    display: inline-block;
+    position: relative;
+    top: -7px;
+    font-size: 0; /*줄간격 붙이기 (간격은 제작할거니깐)*/
+}
+
+.slide .control li {
+    display: inline-block;
+    padding: 0 3px;
+}
+
+.slide .control li.on a {
+    background: #fff;
+}
+
+.slide .control li a {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+.slide .control a {
+    color: transparent;
+}
+
