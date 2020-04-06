@@ -353,7 +353,7 @@ header .spot li:last-child a {
 }
 
 .notice {
-    padding: 0 0 100px;
+    padding: 0;
 }
 
 .notice > div {
@@ -405,11 +405,11 @@ header .spot li:last-child a {
 }
 
 .notice > div .top > ul li:nth-child(1) {
-    background: url(../images/bg_key_link03.jpg) no-repeat;
+    background: url(../images/floor-4907936_640.jpg) no-repeat;
 }
 
 .notice > div .top > ul li:nth-child(2) {
-    background: url(../images/bg_key_link03.jpg) no-repeat;
+    background: url(../images/desktop-2325627_640.jpg) no-repeat;
 }
 
 .notice > div .top > ul li:nth-child(2) a{
@@ -417,7 +417,7 @@ header .spot li:last-child a {
 }
 
 .notice > div .top > ul li:nth-child(3) {
-    background: url(../images/bg_key_link03.jpg) no-repeat;
+    background: url(../images/question-mark-1872665_640.jpg) no-repeat;
 }
 
 .notice > div .top > div {
